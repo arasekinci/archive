@@ -1,0 +1,14 @@
+.container.content {
+  width: 100%;
+  max-width: 980px;
+}
+
+.lead {
+  font-weight: 500;
+}
+
+@media (max-width: 767.98px) {
+  .lead {
+    font-size: 1rem;
+  }
+}

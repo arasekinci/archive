@@ -1,0 +1,42 @@
+#comments .swiper {
+  overflow: hidden;
+}
+
+#comments .swiper-slide {
+  text-align: center;
+}
+
+#comments .swiper-slide img {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid var(--border-color-2);
+  margin: 0 auto;
+}
+
+#comments .swiper-slide h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 16px 0 12px 0;
+}
+
+#comments .swiper-slide p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#comments .swiper-pagination {
+  position: relative;
+  margin-top: 24px;
+}
+
+#comments .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  opacity: 0.25;
+  background-color: #fff;
+}
+
+#comments .swiper-pagination-bullet-active {
+  opacity: 1;
+}

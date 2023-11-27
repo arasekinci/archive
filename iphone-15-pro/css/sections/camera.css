@@ -1,0 +1,66 @@
+#camera .swiper {
+  width: 100%;
+  padding: 0 28%;
+}
+
+#camera .swiper-button-prev,
+#camera .swiper-button-next {
+  --swiper-navigation-size: 20px;
+  padding: 15px 20px;
+  width: auto;
+  height: auto;
+  color: var(--font-color-1);
+  background-color: var(--background-color-2);
+  border-radius: 100%;
+}
+
+#camera .swiper-slide {
+  opacity: 0.3;
+  transition: opacity 200ms linear;
+}
+
+#camera .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+
+#camera .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#camera .swiper-slide h3 {
+  color: var(--font-color-2);
+  font-size: 20px;
+  font-weight: 500;
+  margin: 24px 0 0 0;
+  text-align: center;
+}
+
+#camera .swiper-slide h3 span {
+  color: var(--font-color-1);
+}
+
+@media (max-width: 991.98px) {
+  #camera .swiper {
+    padding: 0 20%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #camera .swiper {
+    padding: 0 15%;
+  }
+
+  #camera .camera-app-img {
+    max-width: 280px;
+    margin: 0 auto 24px;
+    display: block;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #camera .swiper {
+    padding: 0 10%;
+  }
+}

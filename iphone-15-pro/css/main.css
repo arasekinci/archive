@@ -1,0 +1,14 @@
+@import './vendor.css';
+@import './common.css';
+
+@import './layouts/header.css';
+@import './layouts/footer.css';
+
+@import './sections/hero.css';
+@import './sections/camera.css';
+@import './sections/products.css';
+@import './sections/photos.css';
+@import './sections/ecosystem.css';
+@import './sections/faq.css';
+@import './sections/comments.css';
+@import './sections/contact.css';

@@ -1,0 +1,42 @@
+#contact .contact-info {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 32px;
+  padding-top: 8px;
+}
+
+#contact .contact-info i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  width: 54px;
+  height: 54px;
+  background-color: var(--background-color-1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact .contact-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+#contact .contact-info p {
+  font-size: 14px;
+  margin: 0 0 4px 0;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+  font-size: 14px;
+  padding: 10px 12px;
+  background-color: var(--background-color-1);
+}
+
+#contact .contact-form button {
+  font-size: 15px;
+}
