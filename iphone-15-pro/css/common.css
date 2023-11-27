@@ -1,0 +1,123 @@
+:root {
+  --font-color-1: #ffffff;
+  --font-color-2: #868686;
+  --background-color-1: #000000;
+  --background-color-2: #151515;
+  --border-color-1: rgba(255, 255, 255, 0.2);
+  --border-color-2: rgba(255, 255, 255, 0.15);
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+  color: var(--font-color-1);
+  background-color: var(--background-color-1);
+}
+
+p {
+  color: var(--font-color-2);
+  line-height: 1.45;
+}
+
+p span {
+  color: var(--font-color-1);
+  line-height: 1.45;
+}
+
+hr {
+  opacity: 1;
+  margin: 35px 0;
+  border-top-color: var(--border-color-1);
+}
+
+.section {
+  padding: 80px 0;
+  background-color: var(--background-color-1);
+}
+
+.section .section-title {
+  margin-bottom: 40px;
+}
+
+.section .section-title h2 {
+  color: var(--font-color-1);
+  font-size: 65px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.section .section-title h2 span {
+  color: var(--font-color-2);
+}
+
+.section .section-title h4 {
+  color: var(--font-color-2);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.35;
+  margin: 16px 0 0 0;
+}
+
+.section .section-title h4 span {
+  color: var(--font-color-1);
+}
+
+.section .section-content {
+  position: relative;
+  padding: 50px;
+  overflow: hidden;
+  border-radius: 28px;
+  background-color: var(--background-color-2);
+}
+
+.section-gray {
+  background-color: var(--background-color-2);
+}
+
+.section-gray .section-content {
+  background-color: var(--background-color-1);
+}
+
+@media (max-width: 991.98px) {
+  .md-none-max-width {
+    max-width: 100% !important;
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+
+  .section .section-title h2 {
+    font-size: 55px;
+  }
+
+  .section .section-title h4 {
+    font-size: 24px;
+  }
+
+  .section .section-content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .section .section-title {
+    margin-bottom: 20px;
+  }
+
+  .section .section-title h2 {
+    font-size: 30px;
+  }
+
+  .section .section-title h4 {
+    font-size: 18px;
+  }
+
+  .section .section-content {
+    padding: 30px;
+  }
+}
