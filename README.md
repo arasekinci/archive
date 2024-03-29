@@ -3,6 +3,7 @@ Bu depoya muhtemelen doğrudan ihtiyacınız yoktur; gereksiniminiz olan örnek 
 ## Projeler
 
 - [iPhone 15 Pro:](./iphone-15-pro) Statik bir tanıtım sayfasıdır.
+- [Espressolab](./espressolab): Tailwind CSS ve Alpine.js kullanılarak kodlanmış, Espressolab için tasarlanmış statik bir web sayfasıdır.
 
 ## İletişim
 
