@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Images</title>
+</head>
+
+<body>
+  <h1>HTML Images</h1>
+
+  <h2>Example</h2>
+  <img src="../assets/image.jpg">
+
+  <h2>Attributes</h2>
+
+  <h3>The <code>alt</code> Attribute</h3>
+  <img src="../assets/image.jpg" alt="Kız kulesi">
+
+  <h3>The <code>width</code> and <code>height</code> Attribute</h3>
+  <img src="../assets/image.jpg" width="450" height="300">
+
+  <h3>The <code>srcset</code> Attribute</h3>
+  <img src="../assets/image.jpg" srcset="./assets/image.jpg, ./assets/image@2x.jpg 2x, ./assets/image@3x.jpg 3x">
+
+  <h3>The <code>loading</code> Attribute</h3>
+  <img src="../assets/image.jpg" loading="lazy">
+
+  <h2>The HTML <code>picture</code> Element</h2>
+  <picture>
+    <source srcset="../assets/image.avif" type="image/avif" width="950">
+    <source srcset="../assets/image.webp" type="image/webp" width="850">
+    <source srcset="../assets/image.jpg" type="image/jpeg" width="750">
+    <img src="../assets/image.jpg" width="650">
+  </picture>
+</body>
+
+</html>

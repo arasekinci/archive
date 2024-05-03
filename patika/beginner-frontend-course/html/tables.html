@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="re">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tables</title>
+</head>
+
+<body>
+  <h1>Tables</h1>
+  <table>
+    <caption>Table Caption</caption>
+    <colgroup>
+      <col span="2" style="background-color: #eed6d8;">
+      <col style="background-color: #d6eedd;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Pazartesi</th>
+        <th>Salı</th>
+        <th>Çarşamba</th>
+        <th>Perşembe</th>
+        <th>Cuma</th>
+        <th>Cumartesi</th>
+        <th>Pazar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">1</td>
+        <td rowspan="2">3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>9</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th colspan="6">Toplam:</th>
+        <th>900</th>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+
+</html>
