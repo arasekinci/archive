@@ -1,9 +1,13 @@
-Bu depoya muhtemelen doğrudan ihtiyacınız yoktur; gereksiniminiz olan örnek proje bir alt klasörde bulunmaktadır. Sizin için bağlantıları aşağıda bırakıyorum.
+# Arşiv
 
-## Projeler
+Bu depoya muhtemelen doğrudan ihtiyacınız yoktur; gereksiniminiz olan örnek proje bir alt klasörde bulunmaktadır.
 
-- [iPhone 15 Pro](./iphone-15-pro): Bootstrap kullanılarak kodlanmış, iPhone 15 Pro için tasarlanmış statik bir web sayfasıdır.
-- [Espressolab](./espressolab): Tailwind CSS ve Alpine.js kullanılarak kodlanmış, Espressolab için tasarlanmış statik bir web sayfasıdır.
+*Sizin için bağlantıları aşağıda bırakıyorum.*
+
+## Patika.dev
+
+- [iPhone 15 Pro](./patika/iphone-15-pro): Bootstrap kullanılarak kodlanmış, iPhone 15 Pro için tasarlanmış statik bir web sayfasıdır.
+- [Espressolab](./patika/espressolab): Tailwind CSS ve Alpine.js kullanılarak kodlanmış, Espressolab için tasarlanmış statik bir web sayfasıdır.
 
 ## İletişim
 
