@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Pseudo</title>
+  <style>
+    a:hover {
+      color: violet;
+    }
+
+    a:active {
+      color: coral;
+    }
+
+    input:disabled {
+      background-color: lightgray;
+    }
+
+    input:not(.name) {
+      background-color: firebrick !important;
+    }
+
+    li:nth-child(2n) {
+      background-color: aquamarine;
+    }
+
+    .c1::first-line {
+      color: lightcoral;
+    }
+
+    .c2::before,
+    .c2::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      background-color: cornflowerblue;
+      border-radius: 10px;
+    }
+
+    .c2::before {
+      margin-right: 5px;
+    }
+
+    .c2::after {
+      margin-left: 5px;
+    }
+
+    ::selection {
+      color: white;
+      background-color: mediumpurple;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Pseudo</h1>
+  <h2>CSS Pseudo-class</h2>
+  <h3>:active</h3>
+  <p><a href="#">Bağlantıya tıkla.</a></p>
+  <h3>:hover</h3>
+  <p><a href="#">Bağlantının üzerine gel.</a></p>
+  <h3>:disabled</h3>
+  <input type="text" disabled>
+  <h2>:not(selector)</h2>
+  <input type="text" class="name">
+  <h3>:nth-child(n)</h3>
+  <ul>
+    <li>İstanbul</li>
+    <li>İzmir</li>
+    <li>Ankara</li>
+    <li>Muğla</li>
+    <li>Antalya</li>
+  </ul>
+  <h2>CSS Pseudo-elements</h2>
+  <h3>::first-line</h3>
+  <p class="c1">Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita, nihil reprehenderit magnam nisi
+    qui quis quae, molestias, perspiciatis repellendus animi repudiandae! Quos delectus illo dignissimos aut veniam
+    voluptatem aliquid!</p>
+  <h3>::before, ::after</h3>
+  <p class="c2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, cupiditate. Quisquam tenetur nihil
+    tempora, in
+    aperiam distinctio, quidem voluptate molestias eaque repellat obcaecati. Repellat, corrupti voluptatem sed
+    architecto deserunt quae?</p>
+  <h3>::selection</h3>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit dolore ea temporibus aut necessitatibus
+    consectetur iusto consequatur reprehenderit eaque laboriosam error similique nihil expedita quae, nisi voluptate
+    autem aperiam. Doloremque.</p>
+</body>
+
+</html>

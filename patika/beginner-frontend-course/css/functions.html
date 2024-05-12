@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Functions</title>
+  <style>
+    :root {
+      --height: 50px;
+      --primary-color: mediumpurple;
+    }
+
+    .calc {
+      width: calc(50% + 50px);
+      height: var(--height);
+      background-color: var(--primary-color);
+    }
+
+    .max {
+      width: max(80%, 200px);
+      height: var(--height);
+      background-color: var(--primary-color);
+    }
+
+    .rgba {
+      height: 50px;
+      background-color: rgba(255, 0, 0, 0.25);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Functions</h1>
+  <h2>calc(unit)</h2>
+  <div class="calc"></div>
+  <h2>max(value1, value2)</h2>
+  <div class="max"></div>
+  <h2>rgba(red, green, blue, alpha)</h2>
+  <div class="rgba">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi hic consectetur ut reiciendis in.
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Backgrounds</title>
+  <style>
+    .c1 {
+      background-color: aqua;
+    }
+
+    .c2 {
+      background-color: orange;
+    }
+
+    .c3 {
+      width: 400px;
+      height: 300px;
+      background-image: url('../assets/image.jpg');
+      /* background-size: cover; */
+      background-size: 300px 200px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: 1px solid gray;
+    }
+
+    .c4 {
+      width: 400px;
+      height: 300px;
+      background: orange url('../assets/image.jpg') no-repeat center center;
+      background-size: 300px 200px;
+      border: 1px solid gray;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Backgrounds</h1>
+  <h2>background-color</h2>
+  <p class="c1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta sunt at delectus rem
+    mollitia dolore!
+    Fugit quos eveniet deserunt eius omnis. Repudiandae excepturi mollitia tenetur, ullam maiores corporis in?</p>
+  <p class="c2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus vero obcaecati laboriosam soluta
+    sit cumque
+    nam consequuntur omnis molestiae deleniti eum cupiditate corporis, quae nisi laborum iste accusantium possimus
+    aspernatur.</p>
+  <h2>background-image</h2>
+  <div class="c3"></div>
+  <h2>background</h2>
+  <div class="c4"></div>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Layout: The position Property</title>
+  <style>
+    .position {
+      border: 4px solid peru;
+      background-color: white;
+    }
+
+    .position.relative {
+      position: relative;
+    }
+
+    .position.absolute {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .position.sticky {
+      position: sticky;
+      top: 0;
+      left: 0;
+      border-color: hotpink;
+    }
+
+    .position.fixed {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 200px;
+      border-color: chocolate;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Layout: The position Property</h1>
+  <h2>position: static;</h2>
+  <div class="position">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa repellendus, explicabo, autem a
+      repudiandae enim corporis sed praesentium delectus commodi non obcaecati! Consectetur laborum itaque laboriosam
+      necessitatibus totam in?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto praesentium autem consequatur aut repellat veniam
+      eaque in commodi ipsum fugit vero expedita alias dolore, officia vitae est minus. Sequi, laboriosam.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, ex. Esse, aperiam reiciendis iure velit quo
+      suscipit. Doloribus sunt ducimus praesentium nisi porro rem, veritatis veniam earum placeat quos voluptatum!</p>
+  </div>
+  <h2>position: relative;</h2>
+  <div class="position relative">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa repellendus, explicabo, autem a
+      repudiandae enim corporis sed praesentium delectus commodi non obcaecati! Consectetur laborum itaque laboriosam
+      necessitatibus totam in?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quidem beatae nemo placeat voluptatibus ratione,
+      adipisci molestiae quasi voluptas, soluta, laborum repellendus! Optio accusantium repellat enim vitae nihil.
+      Pariatur, cum!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corrupti eos sint dicta mollitia ex, magni
+      nesciunt necessitatibus itaque magnam nemo minima ea cumque provident pariatur nisi asperiores quas perspiciatis.
+    </p>
+  </div>
+  <h2>position: absolute;</h2>
+  <div class="position relative">
+    <div class="position absolute">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eaque sed minima itaque atque nisi nulla eius,
+        ducimus, hic necessitatibus distinctio qui numquam nihil velit placeat animi neque nobis magni?</p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2>position: sticky;</h2>
+  <div class="position sticky">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eaque sed minima itaque atque nisi nulla eius,
+      ducimus, hic necessitatibus distinctio qui numquam nihil velit placeat animi neque nobis magni?</p>
+  </div>
+  <div class="position fixed">Bu bir sabit öğedir.</div>
+  <div style="height: 10vh;"></div>
+  <p>Dolore eiusmod in reprehenderit sunt nisi quis ut qui ex laboris ea magna. Consequat laborum amet fugiat veniam
+    irure. Excepteur laboris magna Lorem tempor cupidatat magna cupidatat enim dolor nostrud laborum aute. Duis deserunt
+    exercitation occaecat ex consectetur qui. Et esse ad eiusmod in exercitation elit cupidatat sint consectetur labore
+    irure ad duis. Aliqua veniam enim voluptate sunt ex aliqua qui.</p>
+  <p>Ex nulla ipsum mollit id consequat laborum et ut aliquip cillum aliquip excepteur. Laborum cupidatat quis dolor
+    enim aliquip et exercitation ullamco voluptate occaecat aute nostrud sunt. Aliqua magna irure exercitation tempor
+    enim nulla. Consectetur laborum qui esse sint. Consectetur deserunt qui amet officia minim deserunt. Officia duis
+    occaecat ipsum officia sit voluptate aliquip culpa nostrud excepteur do commodo quis.</p>
+  <p>Qui dolor proident minim nulla consectetur quis magna incididunt officia incididunt consequat adipisicing.
+    Voluptate laboris nulla in labore ad anim do voluptate consequat nostrud. Et nisi eu amet excepteur minim. Velit
+    eiusmod culpa in esse anim. Sunt laboris proident adipisicing id commodo nulla cillum do commodo aute duis
+    adipisicing minim. Exercitation veniam ut proident labore esse fugiat cupidatat eiusmod id velit esse. Nulla id
+    laboris consectetur occaecat.</p>
+  <p>Elit eu cillum veniam ullamco qui et ullamco consectetur. Magna nulla aliqua ullamco adipisicing occaecat duis
+    eiusmod occaecat do nostrud est laboris. Sit ipsum proident irure tempor cillum ad minim tempor ipsum cupidatat.
+    Adipisicing commodo exercitation non anim.</p>
+  <p>Occaecat pariatur exercitation do qui. Magna in incididunt quis elit sit. Adipisicing dolore ea id non commodo duis
+    sit id laborum sunt eu. Tempor consequat dolore ipsum non ea ipsum laboris quis.</p>
+  <p>Duis qui ad laborum et aliquip mollit esse id. Non cillum ullamco irure id exercitation sint dolore ad. Eiusmod
+    amet occaecat ea exercitation voluptate ad nostrud dolore ullamco. Veniam ullamco aliquip sunt sunt ad.</p>
+  <p>Ex et nulla dolor anim exercitation cupidatat dolore aliqua Lorem. Culpa ut nostrud eiusmod minim fugiat minim
+    reprehenderit deserunt irure consequat. Irure aliquip mollit ea magna est dolor nostrud sunt minim.</p>
+  <p>Ut non exercitation irure anim aute excepteur Lorem eiusmod nulla non. Non enim pariatur anim dolor elit ex fugiat
+    est. Quis sit nulla consequat exercitation. Reprehenderit consectetur sunt dolore ea cupidatat velit.</p>
+  <p>Cupidatat dolor id nostrud ad duis quis exercitation duis excepteur veniam Lorem minim ut. Fugiat nostrud ipsum
+    voluptate ullamco labore consectetur exercitation sunt ad exercitation. Exercitation irure duis do magna cillum. Sit
+    commodo laboris exercitation incididunt ex nostrud. Quis reprehenderit sunt ut qui fugiat adipisicing voluptate ut
+    ipsum pariatur. In consectetur in voluptate dolore excepteur duis non irure do quis do ut duis.</p>
+  <p>Qui ex culpa aliquip aliqua labore quis Lorem reprehenderit eiusmod et in adipisicing culpa laboris. Minim sunt
+    dolor eu mollit sit consequat non nostrud. Duis in adipisicing nostrud velit eu tempor. Commodo pariatur quis
+    occaecat id reprehenderit adipisicing do fugiat irure sint anim. Proident aliquip ullamco do elit id esse enim anim
+    et cillum mollit culpa.</p>
+  <p>Consequat deserunt minim voluptate est aute minim consequat dolor incididunt amet ipsum consequat. Do dolore irure
+    officia nulla qui excepteur cillum mollit dolore est cillum ut voluptate. Reprehenderit pariatur eiusmod consequat
+    occaecat laboris in est deserunt. Laboris dolor ad cillum occaecat quis non do est irure est. Ex ad nulla commodo in
+    ad pariatur sint irure magna consequat mollit enim anim. Nostrud dolor nostrud id elit velit eiusmod nulla.</p>
+  <p>Pariatur cillum ullamco laborum nisi tempor exercitation officia culpa reprehenderit. Consectetur consequat eiusmod
+    mollit cillum est eu duis incididunt pariatur et duis. Ex Lorem ex irure est ullamco excepteur anim minim nostrud
+    elit quis pariatur est. Voluptate id aliqua sunt aute quis ea commodo exercitation pariatur cupidatat commodo non.
+    Est laborum sint non laboris velit officia sit excepteur consequat consectetur sit.</p>
+  <p>Esse eiusmod incididunt proident occaecat duis quis aute ad. Et dolor nulla veniam ad est nulla sunt tempor eiusmod
+    mollit excepteur tempor. Anim aliqua excepteur Lorem deserunt aliquip nisi consequat minim enim cillum. Excepteur ea
+    exercitation laborum enim sint ea id ullamco proident.</p>
+  <p>In quis excepteur ullamco amet pariatur esse elit. Est eiusmod labore anim voluptate aliqua officia ex et. Laboris
+    dolore id exercitation sunt consectetur Lorem.</p>
+  <p>Eu fugiat ad cupidatat enim. Qui labore ullamco ipsum tempor exercitation mollit minim ipsum reprehenderit. Non
+    velit sit consectetur anim est in dolor commodo duis dolore. Amet ex in sunt aute ut velit reprehenderit duis ut
+    tempor. Consequat culpa sunt exercitation amet irure ad eiusmod. Occaecat eu id proident velit eu adipisicing
+    deserunt incididunt.</p>
+  <p>Officia eu minim nulla consequat laborum. Deserunt deserunt id consequat excepteur exercitation consectetur tempor
+    occaecat. Ad consectetur dolor voluptate exercitation et ea exercitation quis reprehenderit eiusmod duis. Non do id
+    eiusmod ea.</p>
+  <p>In pariatur cupidatat nisi velit aute cillum magna tempor reprehenderit. Id irure occaecat ea esse Lorem eu
+    consectetur proident dolore eu. Incididunt officia commodo officia aliquip qui officia. Aute veniam in anim laboris
+    laboris veniam est in aliquip cupidatat ad laboris enim. Aliquip fugiat dolor nisi fugiat cupidatat dolor consequat
+    amet. Exercitation tempor nulla excepteur excepteur sint deserunt.</p>
+  <p>Ex mollit velit id officia magna esse nulla. Aliqua labore ut mollit aute quis Lorem ut eu dolor enim deserunt.
+    Duis sit quis eiusmod aliqua dolor anim dolore et laborum Lorem. Lorem amet esse ipsum do ea.</p>
+  <p>Ipsum incididunt commodo aute laborum irure cupidatat pariatur. Sunt consequat sit laboris nostrud irure sint quis
+    veniam ad anim pariatur. Laboris deserunt nostrud Lorem ut mollit nostrud.</p>
+  <p>eserunt laboris cupidatat aliqua irure enim. Aliqua quis consequat commodo reprehenderit. Est do consequat sint
+    consequat. Cupidatat qui amet tempor anim reprehenderit.</p>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Layout: The z-index Property</title>
+  <style>
+    .box {
+      position: relative;
+      width: 100px;
+      height: 100px;
+    }
+
+    .blue {
+      z-index: 1;
+      background-color: cornflowerblue;
+    }
+
+    .red {
+      z-index: 2;
+      margin: -50px 0 0 50px;
+      background-color: crimson;
+    }
+
+    .green {
+      z-index: 3;
+      margin: -50px 0 0 100px;
+      background-color: forestgreen;
+    }
+
+    .orange {
+      z-index: 4;
+      margin: -50px 0 0 150px;
+      background-color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Layout: The z-index Property</h1>
+  <div class="box blue"></div>
+  <div class="box red"></div>
+  <div class="box green"></div>
+  <div class="box orange"></div>
+  <h2>z-Index Schema</h2>
+  <div style="position: relative; z-index: 3;">
+    <div class="box blue"></div>
+  </div>
+  <div class="box red"></div>
+</body>
+
+</html>
