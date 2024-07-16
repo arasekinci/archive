@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Forms</title>
+</head>
+
+<body>
+  <h1>JavaScript Forms</h1>
+  <form id="signin">
+    <input type="text" name="username" placeholder="Kullanıcı adı" required>
+    <input type="password" name="password" placeholder="Parola" required>
+    <button type="submit">Giriş yap</button>
+  </form>
+  <script>
+    const form = document.getElementById('signin');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      // console.log(event);
+      console.clear();
+
+      const usernameElem = form.querySelector('[name="username"]');
+      const passwordElem = form.querySelector('[name="password"]');
+      console.group('querySelector');
+      console.log('username', usernameElem.value);
+      console.log('password', passwordElem.value);
+      console.groupEnd();
+
+      const data = new FormData(event.currentTarget);
+      const username = data.get('username');
+      const password = data.get('password');
+
+      console.group('FormData');
+      console.log('username', username);
+      console.log('password', password);
+      console.groupEnd();
+
+      if (username === '' || password === '') {
+        alert('Kullanıcı adı ya da şifre boş olamaz.');
+      } else if (username.length < 3) {
+        alert('Kullanıcı adı 3 karakterden az olamaz.');
+      } else if (password.length < 6) {
+        alert('Parola 6 karakterden az olamaz.');
+      } else {
+        const rawdata = {
+          username,
+          password,
+          authId: 'aradasdasfdjnfsdf',
+        }
+
+        console.log('request', rawdata);
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Operators</title>
+</head>
+
+<body>
+  <h1>JavaScript Operators</h1>
+  <script>
+    let x = 10;
+    let y = 2;
+    let z = 0;
+
+    console.group('Aritmetic');
+    z = x + y;
+    console.log('addition', z);
+
+    z = x - y;
+    console.log('subtraction', z);
+
+    z = x * y;
+    console.log('multiplication', z);
+
+    z = x / y;
+    console.log('division', z);
+
+    z = x % y;
+    console.log('modules', z);
+
+    z = x ** y;
+    console.log('exponentiation', z);
+
+    z = (100 + 50) * 2;
+    console.log('precedence', z);
+
+    // x = x + 1;
+    x++;
+    console.log('increment', x);
+
+    // x = x - 1;
+    x--;
+    console.log('decrement', x);
+    console.groupEnd();
+
+    console.group('Assignment');
+    x += y;
+    console.log('addition', x);
+    x = 10;
+
+    x -= y;
+    console.log('subtraction', x);
+    x = 10;
+
+    x *= y;
+    console.log('multiplication', x);
+    x = 10;
+
+    x /= y;
+    console.log('division', x);
+    x = 10;
+    console.groupEnd();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Web APIs</title>
+</head>
+
+<body>
+  <h1>JavaScript Web APIs</h1>
+  <h2>Web History API</h2>
+  <button onclick="back()">Go Back</button>
+  <button onclick="go()">Go Back 2 Pages</button>
+  <button onclick="forward()">Go Forward</button>
+  <h2>Web Storage API</h2>
+  <button onclick="setItem()">Set Item</button>
+  <button onclick="getItem()">Get Item</button>
+  <button onclick="removeItem()">Remove Item</button>
+  <h2>Web Fetch API</h2>
+  <button onclick="fetchUsers()">Fetch Users</button>
+  <h2>Web Notification API</h2>
+  <button onclick="notifyme()">Notify me!</button>
+  <script>
+    // Web History API
+    function back() {
+      history.back();
+    }
+
+    function go() {
+      history.go(-2);
+    }
+
+    function forward() {
+      history.forward();
+    }
+
+    // Web Storage API
+    function setItem() {
+      // Local Storage
+      localStorage.setItem('name', 'Cenk Taner');
+      // Session Storage
+      sessionStorage.setItem('name', 'Genç Osman Yavaş');
+    }
+
+    function getItem() {
+      // Local Storage
+      console.log('local', localStorage.getItem('name'));
+      // Session Storage
+      console.log('session', sessionStorage.getItem('name'));
+    }
+
+    function removeItem() {
+      // Local Storage
+      localStorage.removeItem('name');
+      // Session Storage
+      sessionStorage.removeItem('name');
+    }
+
+    // Web Fetch API
+    function fetchUsers() {
+      fetch('https://jsonplaceholder.typicode.com/users')
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (users) {
+          console.log('users', users);
+        })
+    }
+
+    function sayhi() {
+      const notification = new Notification('Merhaba Aras!');
+    }
+
+    function notifyme() {
+      if ('Notification' in window) {
+        if (Notification.permission === 'granted') {
+          sayhi();
+        } else if (Notification.permission === 'denied') {
+          console.log('Bildirim izin verilmedi.');
+        } else {
+          Notification.requestPermission().then((permission) => {
+            if (permission === 'granted') {
+              sayhi();
+            }
+          });
+        }
+      } else {
+        console.log('Notification API desteklenmiyor.');
+      }
+    }
+  </script>
+</body>
+
+</html>

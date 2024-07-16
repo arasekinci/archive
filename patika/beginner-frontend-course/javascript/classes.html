@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Classes</title>
+</head>
+
+<body>
+  <h1>JavaScript Classes</h1>
+  <script>
+    class Vehicle {
+      constructor(options) {
+        options = options || {};
+
+        this.type = options.type;
+        this.brand = options.brand;
+        this.price = options.price;
+      }
+    }
+
+    class Car extends Vehicle {
+      constructor(brand, price) {
+        super({
+          type: 'car',
+          brand,
+          price,
+        });
+      }
+    }
+
+    class Bycle extends Vehicle {
+      constructor(brand, price) {
+        super({
+          type: 'bicycle',
+          brand,
+          price,
+        });
+      }
+    }
+
+    const bycle = new Bycle('Bianchi', 1000);
+    const car = new Car('Audi', 80000);
+
+    console.dir(bycle);
+    console.dir(car);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Arrays</title>
+</head>
+
+<body>
+  <h1>JavaScript Arrays</h1>
+  <script>
+    let numbers = [-1, 3, 2, 4];
+    let strings = ['B', 'C', 'D', 'D'];
+
+    console.dir(numbers);
+    console.dir(strings);
+
+    // 0. elemanı güncelle
+    numbers[0] = 1;
+
+    // Dizinin sonuna ekle
+    strings.push('Push');
+
+    // Dizinin başına ekle
+    strings.unshift('Unshift');
+
+    // Dizin belirli bir yerine eleman ekle
+    strings.splice(2, 0, 'Splice 1', 'Splice 2');
+
+    // Dizinin son elemanını sil
+    strings.pop();
+
+    // Dizin ilk elemanını sil
+    strings.shift();
+
+    // Dizi elemanlarını sırala
+    numbers.sort();
+
+    // Dizi elemanlarını ters sırala
+    numbers.reverse();
+
+    // Dizileri birleştir
+    const concated = numbers.concat([5, 6]);
+    console.log('numbers.concat()', concated);
+
+    // Dizi içindeki her eleman için işlem yap
+    const reduced = numbers.reduce(function (total, value) {
+      return total + value;
+    }, 0);
+    console.log('numbers.reduce()', reduced);
+
+    // Dizi içinde ki tüm elemanlar için koşulu sına
+    const isOK = numbers.every(function (value) {
+      if (value > 0) {
+        return true;
+      }
+    });
+    console.log('numbers.every()', isOK);
+
+    // Dizi içinde ki bazı elemanlar için koşulu sına
+    const isSomeOK = numbers.some(function (value) {
+      if (value > 2) {
+        return true;
+      }
+    });
+    console.log('numbers.some()', isSomeOK);
+
+    // Dizinin belli bir kısmın böl
+    const sliced = strings.slice(1, 3);
+    console.log('strings.slice()', sliced);
+
+    // Diziyi metin dönüştür
+    const joined = strings.join(' - ');
+    console.log('strings.join()', joined);
+
+    // Dizi içinde bir elemanı ara
+    const finded = strings.find(function (value) {
+      if (value === 'D') {
+        return value;
+      }
+    });
+    console.log('strings.find()', finded);
+
+    // Dizi içinde tüm elemanları ara
+    const filtered = strings.filter(function (value) {
+      if (value === 'D') {
+        return value;
+      }
+    });
+    console.log('strings.filter()', filtered);
+
+    // Dizi içinde ki tüm eleman için işlem yap
+    const mapped = strings.map(function (value) {
+      return '(' + value + ')';
+    });
+    console.log('strings.map()', mapped);
+
+    console.log('numbers[]', numbers[0]);
+    console.log('strings[]', strings[3]);
+    console.log('strings.includes()', strings.includes('D'));
+    console.log('strings.indexOf()', strings.indexOf('D'));
+    console.log('strings.lastIndexOf()', strings.lastIndexOf('D'));
+    console.log('strings.at()', strings.at(0));
+  </script>
+</body>
+
+</html>

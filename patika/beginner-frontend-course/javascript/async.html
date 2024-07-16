@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous JavaScript</title>
+</head>
+
+<body>
+  <h1>Asynchronous JavaScript</h1>
+  <button id="callback">Callback</button>
+  <button id="promise">Promise</button>
+  <button id="async">Async/Await</button>
+  <script>
+    // JavaScript Callbacks
+    function close() {
+      console.log('callback:close');
+    }
+
+    function signin() {
+      console.log('callback:signin');
+    }
+
+    function open(nextstep) {
+      console.log('callback:open');
+
+      setTimeout(function () {
+        nextstep();
+      }, 2000);
+    }
+
+    document.getElementById('callback').addEventListener('click', function () {
+      if (true) {
+        open(close);
+      } else {
+        open(signin);
+      }
+    });
+
+    // JavaScript Promises
+    function promise1() {
+      return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          resolve('promise:1');
+        }, 2000);
+      });
+    }
+
+    function promise2() {
+      return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          resolve('promise:2');
+        }, 3000);
+      });
+    }
+
+    // var promise = new Promise(function (resolve, reject) {
+    //   var data = 'getuser';
+
+    //   if (data) {
+    //     resolve(data);
+    //   } else {
+    //     reject('No data');
+    //   }
+    // });
+
+    // promise.then(function (data) {
+    //   // redirect profile page
+    // }).catch(function (err) {
+    //   // redirect signin page
+    // })
+
+    document.getElementById('promise').addEventListener('click', function () {
+      promise1().then(function (value) {
+        console.log(value);
+      });
+
+      Promise.all([promise1(), promise2()]).then(function (values) {
+        console.log(values);
+      });
+
+      console.log('promise:click');
+    });
+
+    // JavaScript Async/Await
+    async function getposts() {
+      return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          resolve([{
+            title: 'HTML Nedir?',
+            slug: 'html-nedir',
+          }, {
+            title: 'CSS Nedir?',
+            slug: 'css-nedir',
+          }])
+        }, 2000);
+      });
+    }
+
+    async function getuser() {
+      return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          resolve({
+            name: 'Aras',
+            surname: 'Ekinci',
+            username: 'arasekinci',
+          })
+        }, 2000);
+      });
+    }
+
+    async function getdata() {
+      var user = await getuser();
+      console.log('async:user', user);
+      var posts = await getposts();
+      console.log('async:posts', posts);
+    }
+
+    document.getElementById('async').addEventListener('click', function () {
+      try {
+        getdata();
+      } catch (err) {
+
+      }
+    });
+  </script>
+</body>
+
+</html>

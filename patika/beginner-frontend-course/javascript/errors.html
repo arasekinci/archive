@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Errors</title>
+</head>
+
+<body>
+  <h1>JavaScript Errors</h1>
+  <button onclick="error()">Error</button>
+  <button onclick="syntaxError()">Syntax Error</button>
+  <button onclick="typeError()">Type Error</button>
+  <hr>
+  <p>Lütfen 5 ile 10 arasında bir sayı girin.</p>
+  <input type="text" id="input">
+  <button onclick="test()">Validate</button>
+  <script>
+    function error() {
+      throw new Error('Custom Error');
+    }
+
+    function syntaxError() {
+      throw new SyntaxError('Custom SyntaxError');
+    }
+
+    function typeError() {
+      throw new TypeError('Custom TypeError');
+    }
+
+    try {
+      throw new Error('Custom Error');
+    } catch (err) {
+      if (err instanceof Error) {
+        console.log('instanced');
+      }
+    }
+
+    function validate(value) {
+      if (value.trim() === '') {
+        throw 'Boş değer.';
+      } else if (isNaN(value)) {
+        throw 'Değer bir sayı değil.';
+      } else if (value < 5) {
+        throw "Sayı 5'ten küçük";
+      } else if (value > 10) {
+        throw "Sayı 10'dan büyük";
+      }
+
+      return true;
+    }
+
+    function test() {
+      try {
+        const value = document.getElementById('input').value;
+
+        validate(value);
+        // request
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  </script>
+</body>
+
+</html>

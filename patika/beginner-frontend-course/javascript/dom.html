@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript DOM</title>
+</head>
+
+<body>
+  <h1>JavaScript DOM</h1>
+  <ul>
+    <li id="html" class="course">HTML</li>
+    <li id="css" class="course">CSS</li>
+    <li id="javascript" class="course">JavaScript</li>
+    <li id="tailwindcss" class="course">Tailwind CSS</li>
+  </ul>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora commodi nobis cumque totam blanditiis vitae
+    deleniti suscipit ipsam fugit adipisci expedita similique quas ex explicabo vero velit, aut consectetur dolores.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, pariatur officiis alias odio ullam ratione facilis
+    illum nam sint accusamus assumenda, obcaecati deleniti debitis dolorum blanditiis. Eveniet deserunt beatae
+    obcaecati.</p>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus corporis beatae commodi animi velit molestias.
+    Molestiae asperiores error voluptate, odio, corrupti et ex quasi placeat omnis minima aperiam, totam dolor.</p>
+  <script>
+    console.log(document);
+    console.log(document.documentElement);
+    console.log(document.head);
+    console.log(document.body);
+
+    var body = document.body;
+    body.dataset.uuid = '#123';
+    body.setAttribute('id', 'custom-id');
+    body.classList.add('custom-class1');
+
+    setTimeout(() => {
+      body.style.backgroundColor = '#F4F4F4';
+    }, 2000);
+
+    var elementById = document.getElementById('css');
+    elementById.style.backgroundColor = 'yellow';
+
+    console.groupCollapsed('getElementById()')
+    console.log(elementById)
+    console.dir(elementById)
+    console.groupEnd()
+
+    var elementByClassName = document.getElementsByClassName('course');
+    console.groupCollapsed('getElementsByClassName()')
+    console.log(elementByClassName)
+    console.groupEnd()
+
+    var elementByTagName = document.getElementsByTagName('p');
+    console.groupCollapsed('getElementsByTagName()')
+    console.log(elementByTagName)
+    console.groupEnd()
+
+    var querySelector = document.querySelector('.course');
+    console.groupCollapsed('querySelector()')
+    console.log(querySelector)
+    console.groupEnd()
+
+    var querySelectorAll = document.querySelectorAll('ul > .course');
+    console.group('querySelectorAll()')
+    console.log(querySelectorAll)
+    console.groupEnd()
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript BOM</title>
+</head>
+
+<body>
+  <h1>JavaScript BOM</h1>
+  <script>
+    console.log(window);
+
+    console.group('Window Screen');
+    console.log(screen);
+    console.log('screen.width', screen.width);
+    console.log('screen.height', screen.height);
+    console.groupEnd();
+
+    console.group('Window Location');
+    console.log(location);
+    console.log('location.origin', location.origin);
+    console.log('location.pathname', location.pathname);
+    console.log('location.href', location.href);
+    console.groupEnd();
+
+    console.group('Window Navigator');
+    console.log(navigator);
+    console.log('navigator.userAgent', navigator.userAgent);
+    console.log('navigator.vendor', navigator.vendor);
+    console.groupEnd();
+
+    // JavaScript Timing Events
+    setTimeout(function () {
+      console.log('setTimeout');
+    }, 1000);
+
+    var count = 0;
+    var interval = setInterval(function () {
+      if (count === 5) {
+        count = 0;
+        clearInterval(interval);
+      } else {
+        count = count + 1;
+        console.log('setInterval', count);
+      }
+    }, 1000);
+  </script>
+</body>
+
+</html>

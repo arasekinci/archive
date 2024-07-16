@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Events</title>
+</head>
+
+<body>
+  <h1>JavaScript Events</h1>
+  <button id="button">Mouse Event</button>
+  <input id="input" type="text" placeholder="Input Event">
+  <button onclick="handleClear()">Clear Event</button>
+  <script>
+    var body = document.body;
+    var button = document.getElementById('button');
+    var input = document.getElementById('input');
+
+    function handleKeyUp(event) {
+      console.log('keyup', event);
+    }
+
+    function handleKeyDown(event) {
+      console.log('keydown', event);
+    }
+
+    // Add Keyboard Event
+    body.addEventListener('keyup', handleKeyUp);
+    body.addEventListener('keydown', handleKeyDown);
+
+    function handleClick(event) {
+      console.log('click', event);
+      // console.log('click', event.target);
+      // console.log('click', event.currentTarget);
+    }
+
+    function handleMouseOver(event) {
+      console.log('mouseover', event);
+    }
+
+    function handleMouseOut(event) {
+      console.log('mouseout', event);
+    }
+
+    // Add Mouse Event
+    button.addEventListener('click', handleClick);
+    button.addEventListener('mouseover', handleMouseOver);
+    button.addEventListener('mouseout', handleMouseOut);
+
+    function handleInput(event) {
+      console.log('input', event);
+    }
+
+    // Add Input Event
+    input.addEventListener('input', handleInput);
+
+    function handleClear() {
+      // Add Keyboard Event
+      body.removeEventListener('keyup', handleKeyUp);
+      body.removeEventListener('keydown', handleKeyDown);
+
+      // Add Mouse Event
+      button.removeEventListener('click', handleClick);
+      button.removeEventListener('mouseover', handleMouseOver);
+      button.removeEventListener('mouseout', handleMouseOut);
+
+      // Add Input Event
+      input.removeEventListener('input', handleInput);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Loops</title>
+</head>
+
+<body>
+  <h1>JavaScript Loops</h1>
+  <script>
+    // For Loop
+    for (let i = 0; i < 5; i++) {
+      console.log('for', i);
+    }
+
+    // For...In Loop
+    const person = {
+      name: 'John',
+      age: 28,
+      city: 'New York',
+    }
+
+    for (const key in person) {
+      const value = person[key];
+      console.log('for...in', key, value);
+    }
+
+    // For...Of Loop
+    const fruits = [
+      'apple',
+      'banana',
+      'chery',
+    ];
+
+    for (const fruit of fruits) {
+      console.log('for...of', fruit);
+    }
+
+    // While Loop
+    let count = 0;
+
+    while (count < 5) {
+      console.log('while', count);
+      count++;
+    }
+
+    // Do While Loop
+    let count2 = 5;
+
+    do {
+      console.log('do...while', count2);
+      count2--;
+    } while (count2);
+  </script>
+</body>
+
+</html>
