@@ -13,6 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Remove existing .sources directory
+        run: rm -rf .sources
+
+      - name: Create new .sources directory
+        run: mkdir -p .sources
+
       - name: Compress projects
         run: |
           PATHS=("patika/beginner-frontend-course" "patika/espressolab" "patika/iphone-15-pro")
