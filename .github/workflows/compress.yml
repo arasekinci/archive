@@ -1,0 +1,30 @@
+name: Compress Projects
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Compress projects
+        run: |
+          PATHS=("beginner-frontend-course" "patika/espressolab" "patika/iphone-15-pro")
+          for dir in "${PATHS[@]}"; do
+            name=$(basename "$dir")
+            zip -r ".sources/${name}.zip" "$dir"
+          done
+
+      - name: Commit and push changes
+        run: |
+          git add .sources
+          git commit -m "update compressed projects"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
