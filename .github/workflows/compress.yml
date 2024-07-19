@@ -15,7 +15,7 @@ jobs:
 
       - name: Compress projects
         run: |
-          PATHS=("beginner-frontend-course" "patika/espressolab" "patika/iphone-15-pro")
+          PATHS=("patika/beginner-frontend-course" "patika/espressolab" "patika/iphone-15-pro")
           for dir in "${PATHS[@]}"; do
             name=$(basename "$dir")
             zip -r ".sources/${name}.zip" "$dir"
