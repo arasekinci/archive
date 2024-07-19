@@ -29,6 +29,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
+          git config --global user.name "Aras Ekinci"
+          git config --global user.email "arasekinci@outlook.com"
           git add .sources
           git commit -m "update compressed projects"
           git push origin main
