@@ -1,4 +1,4 @@
-name: Compress Projects
+name: compress-projects
 
 on:
   push:
@@ -17,12 +17,11 @@ jobs:
         run: |
           PATHS=("patika/beginner-frontend-course" "patika/espressolab" "patika/iphone-15-pro")
           for dir in "${PATHS[@]}"; do
-            name=$(basename "$dir")
-            base="${name}.zip"
-            if [ -f "$base" ]; then
-              rm "$base"
+            path="${dir}.zip"
+            if [ -f "$path" ]; then
+              rm "$path"
             fi
-            zip -r "${base}" "$dir"
+            zip -r "$path" "$dir"
           done
 
       - name: Commit and push changes
