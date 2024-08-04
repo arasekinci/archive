@@ -13,26 +13,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Remove existing .sources directory
-        run: rm -rf .sources
-
-      - name: Create new .sources directory
-        run: mkdir -p .sources
-
       - name: Compress projects
         run: |
           PATHS=("patika/beginner-frontend-course" "patika/espressolab" "patika/iphone-15-pro")
           for dir in "${PATHS[@]}"; do
             name=$(basename "$dir")
-            zip -r ".sources/${name}.zip" "$dir"
+            base="${name}.zip"
+            if [ -f "$base" ]; then
+              rm "$base"
+            fi
+            zip -r "${base}" "$dir"
           done
 
       - name: Commit and push changes
         run: |
-          git config --global user.name "Aras Ekinci"
-          git config --global user.email "arasekinci@outlook.com"
-          git add .sources
-          git commit -m "update compressed projects"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add *.zip
+          git commit -m "chore: update compressed projects"
           git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
